@@ -1,0 +1,615 @@
+.parentName.musicParentName.focuscontainer-x {
+	height: 25px;	
+	overflow: hidden;						
+}
+* {
+	scrollbar-color: #3b3b3bad #0000;
+}
+
+							/* Variabeln */
+
+:root {
+	--rounding: 9px;
+	--gradient1: rgba(0,59,131,1);
+	--gradient2: rgba(0,255,139,1);
+}
+
+
+							/* green checkmark */
+
+.playstatebutton-icon-played { color: #51af0b; }
+
+
+
+							/* compact Episode listings */
+/*
+.listItemImage.listItemImage-large.itemAction.lazy { height: 130px; }
+.listItem-content { height: 135px; }
+*/
+.secondary.listItem-overview.listItemBodyText { max-height: 60px; }
+
+
+
+
+							/* Abgerundete Ecken */
+
+.formDialogHeader {
+	border-top-left-radius: var(--rounding);
+	border-top-right-radius: var(--rounding);
+}
+
+.formDialogFooter {
+	border-bottom-left-radius: var(--rounding);
+	border-bottom-right-radius: var(--rounding);
+}
+
+.cardOverlayContainer {
+	border-radius: var(--rounding) !important;
+}
+
+.toast,
+.paperList,
+.cardContent,
+.sessionNowPlayingInnerContent,
+.cardImage,
+.fab,
+.multiSelectCheckboxOutline,
+.itemSelectionPanel,
+.cardContent-shadow,
+.itemDetailImage,
+.cardImageContainer,
+.cardPadder,
+.innerCardFooter,
+.blurhash-canvas,
+.actionSheetMenuItem:hover,
+.dialog,
+.button-flat,
+.visualCardBox,
+.checkboxOutline,
+.emby-select-withcolor,
+.chapterThumbTextContainer,
+.chapterThumbContainer,
+.chapterThumb,
+.emby-input,
+.emby-textarea,
+.emby-select-withcolor,
+#loginPage .raised.block.emby-button,
+.subtitleappearance-preview.flex.align-items-center.justify-content-center {
+	border-radius: var(--rounding) !important;
+}
+
+.osdPoster img {
+	border-radius: var(--rounding);
+	border: none;
+}
+
+.cardContent-shadow,
+.itemDetailImage,
+.cardOverlayContainer,
+.cardPadder,
+.innerCardFooter,
+.blurhash-canvas,
+.actionSheetMenuItem:hover,
+.dialog {
+	border-radius: var(--rounding) !important;
+}
+
+div[data-role="controlgroup"] a[data-role="button"]:first-child {
+	border-bottom-left-radius: var(--rounding);
+	border-top-left-radius: var(--rounding);
+}
+
+div[data-role="controlgroup"] a[data-role="button"]:last-child {
+	border-bottom-right-radius: var(--rounding);
+	border-top-right-radius: var(--rounding);
+}
+
+
+
+
+							/* Scale on hover */
+@media (min-device-width: 10in) {
+	.itemsContainer>.card>.cardBox {
+		margin: 1em;
+		background: rgba(0,0,0,0);
+		transition: transform .2s;
+	}
+	
+	.card:hover {
+		z-index: 200;
+	}
+
+	.card:hover .cardBox {
+		transform: scale(1.1);
+	}
+	
+	/* Cover nicht skalieren */
+
+	/*
+	.detailImageContainer .card.portraitCard.card-hoverable.card-withuserdata .cardBox{
+		transform: scale(1.1)
+	}
+	*/
+
+	.card:not(.show-animation) {
+	  contain: none;
+	}
+	.detailImageContainer .card .cardBox,
+	.detailImageContainer .card.portraitCard.card-hoverable.card-withuserdata .cardBox {
+	  transform: scale(1) !important;
+	}
+	.layout-desktop .detailImageContainer .card {
+	  top: -100%;
+	}
+}
+
+
+
+							/* Eingabefelder */
+
+.selectContainer {
+	margin-right: 1em !important;
+}
+
+.emby-input:focus, .emby-textarea:focus, .emby-select-withcolor:focus {
+	background: rgba(0, 0, 0, 0.8); border: 0.01em solid #00a4dcc2 !important;
+}
+
+
+
+
+							/* Angesehen Häkchen Grün */
+
+.playedIndicator {
+	background: #5dd000d1;
+}
+
+
+
+
+							/* Folgenzähler */
+
+.cardIndicators{
+	right: 0 !Important;
+	top: 0;
+}
+
+.countIndicator,
+.fullSyncIndicator{
+	border-radius: 0;
+	box-shadow: none;
+	padding: 0 0 16px 15px;
+	background: linear-gradient(45deg, rgba(1,96,134,0) 50%, rgb(49, 93, 146) 0%, rgb(0, 204, 255) 100%);
+}
+
+
+
+							/* Filmzähler */
+.mediaSourceIndicator {
+	visibility: hidden;
+}
+
+
+
+
+
+							/* Login Seite */
+
+/* schmal */
+#loginPage .readOnlyContent, #loginPage form {
+	max-width: 22em;
+}
+
+/* Hintergrund */
+#loginPage {
+	background-size: cover !important;
+}
+
+#txtManualName.emby-input, #txtManualPassword.emby-input {
+	font-family: Noto Sans;
+	border: 1px solid #474646;
+}
+
+
+
+							/* Kopfleiste */
+
+.headerTabs {
+	margin-top: -1em;
+}
+.withSectionTabs .headerTop {
+	padding-bottom: .55em;
+}
+@media (min-width:90em) {
+	.headerTabs {
+		margin-top: -4.3em;
+		-webkit-align-items: center;
+		align-items: center;
+		-webkit-align-self: center;
+		align-self: center;
+		-webkit-justify-content: center;
+		justify-content: center;
+		position: relative;
+		width: auto;
+	}
+	.pageWithAbsoluteTabs:not(.noSecondaryNavPage) {
+		padding-top: 4.3em !important;
+	}
+	.headerTop {
+		padding: .8em .8em !important;
+	}
+}
+
+.skinHeader {
+	background: linear-gradient(rgb(5, 5, 5), rgb(20, 20, 20));
+}
+
+
+							/* Video Player */
+
+.videoOsdBottom {
+	background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%);    
+}
+
+.btnPreviousChapter,
+.btnNextChapter {
+	display: none;
+}
+
+div.focuscontainer-x button.btnRewind,
+div.focuscontainer-x button.btnFastForward {
+	display: inline-flex !important;
+}
+
+div.focuscontainer-x div.volumeButtons {
+	display: inline-flex !important;
+}
+
+
+
+
+
+
+							/* Vergrößerte Tab-buttons */ 
+
+.headerTabs.sectionTabs {
+	font-size: 110%;
+}
+
+
+
+
+							/* Tab hover */
+
+.emby-tab-button.emby-tab-button-active::after, .emby-tab-button:hover::after {
+	transform: scale(1);
+}
+
+.emby-tab-button::after {
+	content: "";
+	width: calc(100% - 2em);
+	position: absolute;
+	height: 4px;
+	background: linear-gradient(90deg, var(--gradient1) 0%, var(--gradient2) 100%);
+	border-radius: 10px;
+	transform: scaleX(0);
+	transition: 0.2s;
+	left: 1em;
+	bottom: 0.75em;
+	right: 1em;
+}
+
+.emby-tab-button {
+	position: relative;
+	margin-top: 0.4em;
+	margin-bottom: 0.3em;
+	color: white;
+	font-size: 1.1em;
+	-webkit-filter: drop-shadow(2px 4px 6px rgb(20, 20, 20));
+	filter: drop-shadow(2px 4px 6px rgb(20, 20, 20));
+	padding: 1em !important;
+}
+
+
+
+
+							/* Seite Menü */
+.mainDrawer,
+.mainDrawer.drawer-open {
+	box-shadow: none !important;
+	backdrop-filter: blur(20px);
+	background: linear-gradient(90deg, rgba(0, 0, 1, 0.76) 0%, rgba(0, 0, 0, 0) 100%) !important;
+}
+
+.pageTitle {
+	margin-top: auto; 
+	margin-bottom: auto;
+}
+
+.emby-tab-button {
+	padding: 1.75em 1.7em;
+}
+
+
+
+
+							/* Seite Menü hover */
+
+.navMenuOption {
+	position: relative;
+	border-radius: var(--rounding) !important;
+	grid-gap: 5px;
+}
+
+.navMenuOption:hover {
+	background: transparent;
+	margin-left: 10px !important;
+}
+
+.navMenuOption::before {
+	content: "";
+	width: 5px;
+	height: 1.5em;
+	background: linear-gradient(180deg, var(--gradient1) 0%, var(--gradient2) 100%);
+	display: block;
+	flex: 0 0 auto;
+	border-radius: 10px;
+	opacity: 0;
+	transition: 0.2s;
+}
+
+.navMenuOption:hover:before {
+	opacity: 1;
+	height: 1.5em !important;
+}
+
+.navMenuOption-selected::before {
+	opacity: 1;
+	height: 1.5em;
+}
+
+.navMenuOption-selected {
+	background: transparent !important;
+}
+
+
+
+
+
+							/* Hauptseite erster Reiter nicht scrollbar */
+
+@media (min-device-width: 10in) {
+	.section0 .itemsContainer {
+		flex-wrap: wrap;
+	}
+	.section0 .emby-scrollbuttons {
+		display: none !important;
+	}
+	.section0 .emby-scroller {
+		margin-right: 0;
+		padding-right: 0;
+	}
+}
+
+@media (min-width: 100em) {
+	.overflowBackdropCard, .overflowSmallBackdropCard {
+		width: 18.1vw;
+	}
+	.overflowPortraitCard {
+		width: 11.3vw;
+	}
+}
+
+
+
+							/* Hauptseite Collections Schriftzug auf Bildern */
+
+.section0 .sectionTitle {
+	padding-top: 1.3em !Important;
+}
+
+.section0 .cardBox {
+	background: none;
+	position: relative;
+	border-radius: var(--rounding) !important;
+	overflow: hidden;
+	margin-bottom: 0.6em !important;
+	margin-top: 0.6em !important;
+}
+
+.section0 .cardScalable {
+	height: 0px;
+	border-radius: 0 !important;
+	padding-top: 50%;
+}
+
+.section0 .cardText {
+	position: absolute;
+	background: rgba(0, 0, 0, .66);
+	bottom: 0px;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+}
+
+
+.section0 .cardText bdi{
+	position: relative;
+	top: calc(50% - .7em);
+	font-size: calc(max(3vw, 3em));
+	width: 90%;
+	display: block;
+	left: 5%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.section0 .textActionButton  {
+	text-shadow: 0px 0px 5px#000;
+	font-weight: bolder;
+	text-decoration: none !important;
+	padding: 3% !important;
+	vertical-align: unset;
+}
+
+.cardScalable {
+		contain: none;
+}
+
+
+
+							/* Film Fortschritt-Leiste Gradient */
+
+.itemProgressBarForeground{
+	background: linear-gradient(90deg, var(--gradient1) 0%, var(--gradient2) calc(100%/0.40));
+}
+
+
+
+
+
+
+
+
+							/* Schauspieler-Icons */
+
+/* Schauspieler Bild klein und nice */
+.personCard .cardBox {
+	background: none;
+	position: relative;
+}
+
+.personCard .cardScalable {
+	height: 30px;
+	overflow: hidden;
+	padding-top: 100%;
+	border-radius: var(--rounding);
+}
+
+.personCard .cardText {
+	position: absolute;
+	background: transparent !important;
+	opacity: 1;
+}
+
+.personCard  .cardImageContainer::after {
+	content: "";
+	background: linear-gradient(360deg, rgba(0, 0, 0, 0.75), transparent 70%);
+	width: 100%;
+	bottom: 0;
+	position: absolute;
+	padding-top: 100%;
+}
+
+.personCard .cardText-secondary {
+	bottom: 0%;
+	width: -webkit-fill-available;
+	border-radius: 0px 0px 10px 10px;
+	height: 22px;
+}
+
+.personCard .cardText-first {
+	bottom: 23.5px;
+	width: -webkit-fill-available;
+	height: 22px;
+}
+
+
+
+
+
+
+
+
+/*  movie thumbnail option button same as series thumbnail option button*/
+.cardFooter>.paper-icon-button-light {
+	top: -3em;
+	bottom: unset;
+	padding: 3px;
+}
+.cardFooter .paper-icon-button-light .material-icons {
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, .7) !important;
+	color: rgba(255, 255, 255, .8) !important;
+	border-radius: 50%;
+	font-size: 1.6695652174em !important;
+	height: 1.5em !important;
+	-webkit-justify-content: center;
+	justify-content: center;
+	width: 1.5em !important;
+}
+
+/*  select audio track befor movie*/
+.trackSelections .emby-select-withcolor, .trackSelections .emby-select {
+	padding-right: 28px !Important;
+	padding-left: 8px !Important;
+	text-overflow: ellipsis;
+	background: rgb(36, 36, 36);
+	border: none;
+}
+
+/*  chapter marker smaller*/
+.sliderMarker {
+	height: 0.75em;
+	top: 0.25em;
+	transform: none;
+	-webkit-transform: none;
+}
+
+/*  Movie/Series overview page background*/
+.detailPagePrimaryContainer {
+	backdrop-filter: blur(10px);
+	background: rgba(32, 32, 32, 0.64);
+}
+.detailPageSecondaryContainer {
+	backdrop-filter: blur(10px);
+	background-color: #10101045 !Important;
+}
+.layout-mobile .itemBackdrop {
+	margin-top: -1em;
+}
+.visualCardBox {
+	box-shadow: none;
+	background-color:  transparent;
+}
+.detailLogo {
+	top: calc(max(13.5vh, 5.8em));
+	min-height: 6.8em;
+}
+.itemDetailPage {
+	padding-top: 4.3em !important;
+}
+.itemBackdrop {
+	min-height: 17em;
+	height: 40vh !Important;
+}
+.cardOverlayButton[data-action="menu"]  {
+	padding: 3px;
+	z-index: 2;
+}
+.itemsContainer>.card>.cardBox {
+	margin-top: 0.4em;
+}
+
+/*  Librarys -> hole image clickable */
+.cardOverlayContainer>a {
+	z-index: 1;
+}
+
+@media (pointer: fine) {
+	.emby-scroller {
+		overflow: visible !Important;
+	}
+}
+
+.detailLogo {
+	display: unset;
+}
+
+@media (max-width: 40em) {
+	.detailLogo {
+		display: none;
+	}
+}
